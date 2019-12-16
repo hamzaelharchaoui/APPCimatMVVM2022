@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+    >
+<data>
+    <variable
+        name="loginview"
+        type="com.example.appcimatmvvm.allViewModel.LoginViewModel"/>
+
+<variable
+
+    name="presenter"
+    type="com.example.appcimatmvvm.presenter.Presenter"/>
+</data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.MainActivity"
+    >
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/root_layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+        <RelativeLayout
+
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_view_logo"
+                android:layout_width="200dp"
+                android:layout_height="144dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:padding="12dp"
+                android:src="@drawable/logocmt"
+
+                />
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout1"
+                android:layout_below="@+id/image_view_logo"
+
+                >
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_marginTop="60dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+
+                >
+
+
+                <EditText
+                    android:id="@+id/txtmatriculeLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="12dp"
+                    android:drawablePadding="1dp"
+                    android:hint="Matrucle"
+                    android:inputType="text"
+                    android:padding="12dp"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/txtPassordlogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/Mytext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:text="Forget PassWord ?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:textColor="#64C4E6" />
+
+                <TextView
+                    android:id="@+id/mytext2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="50dp"
+                    android:gravity="left"
+                    android:text="Forget PassWord ?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:textColor="#64C4E6" />
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#FFF"
+                    android:text="Sing In "
+                    android:onClick="@{(v)->presenter.getData()}"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="25dp"
+                android:text="Don't have have account\nSign Up Here"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                android:textColor="#64C4E6" />
+
+
+
+        </RelativeLayout>
+        <ProgressBar android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_bar"
+            android:visibility="invisible"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>
+</layout>
